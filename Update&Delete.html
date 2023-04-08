@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "shortcut icon" type = "x-icon" href = "Icon.png">
+        <link rel = "stylesheet" href = "NavBar&BG.css">
+        <link rel = "stylesheet" href = "Update&Delete.css">
+    </head>
+    <body>
+        <nav>
+            <div>
+                <div><a href = "HomePageSA.html" target="_blank"><img class = "logo" src = "Logo.png"></a></div>
+            </div>
+            <ul>
+                <li><a href = "HomePageSA.html" target = "_blank">HOME</a></li>
+                <li><a href = "AddStudent.html" target = "_blank">REGISTER</a></li>
+                <li><a href = "Update&Delete.html" target = "_blank">UPDATE/DELETE</a></li>
+                <li><a href = "SearchAct.html"target = "_blank">SEARCH FOR ACT STDs</a></li>
+                <li><a href = "AssignDep.html"target = "_blank">ASSIGN DEP</a></li>
+                <li><a href = "View_Act_Inact.html"target = "_blank">VIEW ACT/INACT STDs</a></li>
+                <li><a href = "ChangeStatus.html"target = "_blank">CHANGE STATUS</a></li>
+            </ul>
+        </nav>
+        <h2 class = "grad1">Update Student's Information</h2>
+        <p class = "grad2">Enter the new information of the student:</p>
+        <form>
+            <div>
+                <label>ID</label>
+                <input type = "number" name = "id" required>
+            </div>
+            
+            <div>
+                <label>Name</label>
+                <input type = "text" name = "name">
+            </div>
+
+            <div>
+                <label>GPA</label>
+                <input type = "number" name = "num">
+            </div>
+            
+            <div>
+                <label>Email</label>
+                <input type = "email" placeholder="Name@stud.uni.edu.eg">
+            </div>
+
+            <div>
+                <label>Mobile Number</label>
+                <input type = "number" placeholder = "01*********">
+            </div>
+
+            <div>
+                <label>Date of Birth</label>
+                <input type ="date" name = "date">
+            </div>
+            
+            <div>
+                <label>Level</label>
+                <select name = "level">
+                    <option selected> --Choose Level-- </option>
+                    <option> 1 </option>
+                    <option> 2 </option>
+                    <option> 3 </option>
+                    <option> 4 </option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Status</label>
+                <select name= "status">
+                    <option selected> --Choose Activeness-- </option>
+                    <option> Active </option>
+                    <option> Inactive </option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Gender</label>
+                <select name= "gender">
+                    <option selected> --Choose Gender-- </option>
+                    <option> Female </option>
+                    <option> Male </option>
+                </select>
+            </div>
+
+            <input class = "sub" type="submit" value="Update">
+            <input class = "res" type="reset">
+        </form>
+        <br><br><br>
+        <h2 class = "grad3">Delete Student's Information</h2>
+        <p class = "grad4">Enter the information of student to delete:</p>
+        <form>
+            <div>
+                <label>ID</label>
+                <input type="text" name = "id" required>
+            </div>
+            <input class = "sub" type="submit" value="Delete">    
+            <input class = "res" type="reset">
+        </form>
+        <p class = "copyright">Copyright &copy; 2023  Student Affairs.</p>
+    </body>
+</html>

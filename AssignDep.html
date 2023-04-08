@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel = "shortcut icon" type = "x-icon" href = "Icon.png">
+        <link rel = "stylesheet" href = "NavBar&BG.css">
+        <link rel = "stylesheet" href = "AddStudent.css">
+    </head>
+    <body>
+        <nav>
+            <div>
+                <div><a href = "HomePageSA.html" target="_blank"><img  class = "logo" src = "Logo.png"></a></div>
+            </div>
+            <ul>
+                <li><a href = "HomePageSA.html" target = "_blank">HOME</a></li>
+                <li><a href = "AddStudent.html" target = "_blank">REGISTER</a></li>
+                <li><a href = "Update&Delete.html" target = "_blank">UPDATE/DELETE</a></li>
+                <li><a href = "SearchAct.html"target = "_blank">SEARCH FOR ACT STDs</a></li>
+                <li><a href = "AssignDep.html"target = "_blank">ASSIGN DEP</a></li>
+                <li><a href = "View_Act_Inact.html"target = "_blank">VIEW ACT/INACT STDs</a></li>
+                <li><a href = "ChangeStatus.html"target = "_blank">CHANGE STATUS</a></li>
+            </ul>
+        </nav>
+        <h2>Assign Department</h2>
+        <hr>
+        <p>Enter the Student's Information:</p>
+        <form>
+            <div>
+                <label>Name</label>
+                <input type = "text" name = "name">
+                <br>
+            </div>
+
+            <div>
+                <label>ID</label>
+                <input type = "number" name="id" required>
+                <br>
+            </div>
+
+            <div>
+                <label>Level</label>
+                <select required>
+                    <option value="">--Choose your Level--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <br>
+                </select>
+            </div>
+
+            <div>
+                <label>Department</label>
+                <select required>
+                    <option value = "">--Choose a Department--</option>
+                    <option value = "IS">IS</option>
+                    <option value = "CS">CS</option>
+                    <option value = "IT">IT</option>
+                    <option value = "DS">DS</option>
+                    <option value = "AI">AI</option>
+                    <br>
+                </select>
+            </div>
+            <input style = "float:left;margin-left: 270px;color: white;background-color:black;" type="submit">
+        </form>
+        <br><br>
+        <p>Copyright &copy; 2023 Student Affairs.</p>
+       
+    </body>
+</html>
