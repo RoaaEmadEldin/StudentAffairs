@@ -1,0 +1,35 @@
+table {
+    background-color: ghostwhite;
+    border-style: none;
+    width: 100%;
+
+}
+
+table td {
+    margin: 5px;
+    text-align: center;
+}
+
+table thead td {
+    color: ghostwhite;
+    background-color: #243763;
+
+}
+
+table td:hover{
+    background-color: #d3d3ee;
+}
+
+body{
+    font-family: "Times New Roman";
+    color:#243763
+}
+
+h2{
+    /*
+    background-image: linear-gradient(to right, #1c1f4c, #);
+    */
+    margin-left: 5px;
+    padding:0px;
+
+}
