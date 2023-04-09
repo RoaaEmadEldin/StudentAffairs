@@ -5,24 +5,8 @@
     <head>
         <link rel = "shortcut icon" type = "x-icon" href = "Icon.png">
         <link rel = "stylesheet" href = "NavBar&BG.css">
-        <style>
-            table {
-			border-collapse: collapse;
-			width: 100%;
-			margin-top: 20px;
-            }
-
-            th, td {
-                text-align: left;
-                padding: 8px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            th {
-                background-color: #504a4a;
-                color: white;
-            }
-        </style>
+        <script src="SearchAct.js"></script>
+        <link rel="stylesheet" href="SearchAct.css">
     </head>
     <body>
         <nav>
@@ -39,30 +23,12 @@
                 <li><a href = "ChangeStatus.html"target = "_blank">CHANGE STATUS</a></li>
             </ul>
         </nav>
-        <h1>Search for Students</h1>
-		<form>
-			<label for="searchInput">Search by name:</label>
-			<input type="text" id="searchInput" name="searchInput">
-			<button style = "color: white;background-color:black;"type="submit">Search</button>
-		</form>
-        <table>
-			<thead>
-				<tr>
-					<th>Student ID</th>
-					<th>Name</th>
-					<th>Date of Birth</th>
-					<th>GPA</th>
-					<th>Gender</th>
-					<th>Level</th>
-					<th>Department</th>
-					<th>Email</th>
-					<th>Mobile Number</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-            <tbody>
-                
-       <tbody>
+        <form>
+            <label for="name">Search by name:</label>
+            <input type="text" id="name" name="name">
+            <input type="button" value="Search" onclick="searchStudent()">
+          </form>
+          <div id="result"></div>
        
     </body>
 </html>
