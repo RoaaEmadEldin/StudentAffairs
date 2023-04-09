@@ -45,7 +45,8 @@ table {
     cursor: pointer;
     border-radius: 5px;
   }
-  h1{
+  h2{
     font-family: garamond;
+    margin-left: 10px;
   }
   
