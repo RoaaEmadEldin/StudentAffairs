@@ -6,6 +6,10 @@ function searchStudent() {
   var result = document.getElementById("result");
   var tableHtml = "";
   var found = false;
+   if (name === "") {
+    result.innerHTML = "Please enter a name to search for.";
+    return;
+  }
 
   for (var i = 0; i < students.length; i++) {
     if (students[i].name.toLowerCase().includes(name.toLowerCase()) && students[i].status == "active") {
