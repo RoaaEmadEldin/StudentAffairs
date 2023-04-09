@@ -1,44 +1,65 @@
+.container1 {
+    width: 50%;
+    margin-top:20px;
+    margin-left: 350px;
+    background-color: rgb(244, 240, 238);
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(28,31,76,0.7);
+}
+.container2 {
+    width: 50%;
+    margin-top:10px;
+    margin-left: 350px;
+    background-color: rgb(244, 240, 238);
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(28,31,76,0.7);
+}
 label {
     display: inline-block;
-    width: 200px;
+    width:100px;
+    margin-left: 90px;
+    margin-top: 8px;
     text-align: right;
-    color: #1c1f4c;
+    color: rgb(28, 31, 76);
     font-size: 17px;
     font-weight:bold;
     font-family: garamond;
-    padding: 5px;
+    padding: 6px;
 }
 input,select {
+    width: 60%;
+    margin-left: 10px;
     border: double 3px transparent;
     border-radius: 6px;
     background-image: linear-gradient(white, white), 
-                      linear-gradient(to right, #1c1f4c, #33aaac);
+                        linear-gradient(to right, #1c1f4c, #33aaac);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
-input.sub{
+button{
     color:#ffffff;
     font-family: garamond;
     font-weight: bold;
     font-size: 17px;
-    margin-left: 260px;
     border: double 3px transparent;
+    width:100px;
     border-radius: 6px;
     background-image: linear-gradient(to right, #1c1f4c, #33aaac);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
-input.res{
-    color:#ffffff;
-    font-family: garamond;
-    font-weight: bold;
-    font-size: 17px;
+button.sub{
+    margin-left: 550px; 
+}
+button.res{
     margin-left: 0px;
-    border: double 3px transparent;
-    border-radius: 6px;
-    background-image: linear-gradient(to right, #1c1f4c, #33aaac);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+}
+button.sub:hover, button.res:hover{
+    font-size: 18px;
+    background: linear-gradient(to right,#1c1f4c, #33aaac);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: 0;
 }
 h2{
     font-family: garamond;
@@ -81,3 +102,5 @@ p{
     width: 320px;
     height: 20px;
 }
+
+
