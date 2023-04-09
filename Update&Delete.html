@@ -25,40 +25,40 @@
           <div>
             <h2 class = "grad1">Update Student's Information</h2>
             <p class = "grad2">Enter the new information of the student:</p>
-            <form>
+            <form onsubmit="return CheckInfo1()">
                 <div>
                     <label>ID</label>
-                    <input type = "number" name = "id" required>
+                    <input id = "ID" type = "number"required>
                 </div>
                 
                 <div>
                     <label>Name</label>
-                    <input type = "text" name = "name">
+                    <input id = "Name" type = "text">
                 </div>
     
                 <div>
                     <label>GPA</label>
-                    <input type = "number" name = "num">
+                    <input id = "gpa" type = "text">
                 </div>
                 
                 <div>
                     <label>Email</label>
-                    <input type = "email" placeholder="Name@stud.uni.edu.eg">
+                    <input id = "email" type = "email" placeholder="ID@stud.uni.edu.eg">
                 </div>
     
                 <div>
                     <label>Mobile Number</label>
-                    <input type = "number" placeholder = "01*********">
+                    <input id="number" type = "number" placeholder = "01#########">
                 </div>
     
                 <div>
                     <label>Date of Birth</label>
-                    <input type ="date" name = "date">
+                    <input id = "date" type ="date">
                 </div>
                 
                 <div>
                     <label>Level</label>
-                    <select name = "level">
+                    <select>
                         <option selected> --Choose Level-- </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -69,7 +69,7 @@
                 
                 <div>
                     <label>Status</label>
-                    <select name= "status">
+                    <select>
                         <option selected> --Choose Activeness-- </option>
                         <option> Active </option>
                         <option> Inactive </option>
@@ -78,14 +78,13 @@
                 
                 <div>
                     <label>Gender</label>
-                    <select name= "gender">
+                    <select>
                         <option selected> --Choose Gender-- </option>
                         <option> Female </option>
                         <option> Male </option>
                     </select>
                 </div>
-    
-                <button class = "sub" type="submit" onclick= "UpdateAlert()">Update</button>
+                <button class = "sub" type="submit">Update</button>
                 <button class = "res" type="reset">Reset</button>
             </form>
           </div>
@@ -95,12 +94,12 @@
           <div>
             <h2 class = "grad3">Delete Student's Information</h2>
             <p class = "grad4">Enter the information of student to delete:</p>
-            <form>
+            <form onsubmit="return CheckInfo2()">
                 <div>
                     <label>ID</label>
-                    <input type="number" name = "id" required>
+                    <input id = "ID2" type="number"required>
                 </div>
-                <button class = "sub" type="submit" onclick="DeleteAlert()">Delete</button>    
+                <button class = "sub" type="submit">Delete</button>    
                 <button class = "res" type="reset">Reset</button>
             </form>
           </div>     
