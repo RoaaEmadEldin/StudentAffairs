@@ -1,31 +1,12 @@
+
 <!DOCTYPE html>
 
 <html>
     <head>
         <link rel = "shortcut icon" type = "x-icon" href = "Icon.png">
         <link rel = "stylesheet" href = "NavBar&BG.css">
-        <style>
-              table {
-			border-collapse: collapse;
-			width: 100%;
-			margin-top: 20px;
-            }
-
-            th, td {
-                text-align: left;
-                padding: 8px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            tr:hover {
-                background-color: #7a6d6d;
-            }
-
-            th {
-                background-color: #565445;
-                color: white;
-            }
-        </style>
+        <link rel = "stylesheet" href = "change status.css">
+        <script src = "change status.js"></script>
     </head>
     <body>
         <nav>
@@ -42,104 +23,63 @@
                 <li><a href = "ChangeStatus.html"target = "_blank">CHANGE STATUS</a></li>
             </ul>
         </nav>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Level</th>
-                    <th>Status</th>
-                </tr>
-        <tbody>
-                 <tr>
-                 <td>20210119</td>
-                 <td>Habiba ihab</td>
-                 <td>2</td>
-                 <td>
-                    <select>
-                       <option value="active">Active</option>
-                         <option value="inactive">Inactive</option>
-                    </select>
-                 </td>
-                </tr>
-        <tbody>
-                 <tr>
-                    <td>#####</td>
-                     <td>#######</td>
-                     <td>#</td>
-                     <td>
-                        <select>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                        </select>
-                     </td>
-                  </tr>
-         <tbody>
-                <tr>
-                    <td>#####</td>
-                     <td>#######</td>
-                     <td>#</td>
-                     <td>
-                        <select>
-                             <option value="active">Active</option>
-                             <option value="inactive">Inactive</option>
-                        </select>
-                      </td>
-                 </tr>
-            <tbody>
-                 <tr>
-                    <td>#####</td>
-                    <td>#######</td>
-                    <td>#</td>
-                    <td>
-                        <select>
-                         <option value="active">Active</option>
-                          <option value="inactive">Inactive</option>
-                        </select>
-                     </td>
-                               
-                 </tr>
-             <tbody>
-                 <tr>
-                    <td>#####</td>
-                    <td>#######</td>
-                    <td>#</td>
-                    <td>
-                        <select>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                            </select>
-                     </td>
-                                        
-                </tr> 
-            </thead>
-           
-            <tbody>
-                <tr>
-                    <td>#####</td>
-                    <td>#######</td>
-                    <td>#</td>
-                    <td>
-                    <select>
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
-                      </select>
-                    </td>
-                   
-                </tr>
-                <tbody>
-                    <tr>
-                        <td>#####</td>
-                        <td>#######</td>
-                        <td>#</td>
-                        <td>
-                        <select>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                          </select>
-                        </td>
-                       
-                    </tr>
        
+        <h1>Student Affairs - Change Student Status</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20210119</td>
+        <td>Habiba Ihab</td>
+        <td>habibaMorgan240@gmail.com</td>
+        <td class="active">Active</td>
+        <td><button onclick="changeStatus(1)">Change Status</button></td>
+      </tr>
+      <tr>
+        <td>20210119</td>
+        <td>Habiba Ihab</td>
+        <td>habibaMorgan240@gmail.com</td>
+        <td class="inactive">Inactive</td>
+        <td><button onclick="changeStatus(2)">Change Status</button></td>
+      </tr>
+      <tr>
+        <td>20210119</td>
+        <td>Habiba Ihab</td>
+        <td>habibaMorgan240@gmail.com</td>
+        <td class="active">Active</td>
+        <td><button onclick="changeStatus(3)">Change Status</button></td>
+      </tr>
+      <tr>
+        <td>20210119</td>
+        <td>Habiba Ihab</td>
+        <td>habibaMorgan240@gmail.com</td>
+        <td class="active">Active</td>
+        <td><button onclick="changeStatus(4)">Change Status</button></td>
+      </tr>
+      <tr>
+        <td>20210119</td>
+        <td>Habiba Ihab</td>
+        <td>habibaMorgan240@gmail.com</td>
+        <td class="active">Active</td>
+        <td><button onclick="changeStatus(5)">Change Status</button></td>
+      </tr>
+      <tr>
+        <td>20210119</td>
+        <td>Habiba Ihab</td>
+        <td>habibaMorgan240@gmail.com</td>
+        <td class="active">Active</td>
+        <td><button onclick="changeStatus(6)">Change Status</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class = "copyright">Copyright &copy; 2023  Student Affairs.</p>
     </body>
 </html>
