@@ -8,38 +8,26 @@ table {
 table td {
     margin: 5px;
     text-align: center;
+    font-size: 17px;
 }
 
 table thead td {
     background-image: linear-gradient(to left,#33aaac ,#1c1f4c );
     color: ghostwhite;
-    background-color: #243763;
-
 }
 
-table td:hover{
+table tr:hover{
     background-color: ghostwhite;
 }
 
 body{
     font-family: garamond;
+    
     color:#243763
 }
 
 h2{
-    color: ghostwhite;
-    background-image: linear-gradient(to right, #1c1f4c, #33aaac);
-    margin-left: 7px;
-    padding:0px;
-    font-weight: bold;
-    border-radius: 15px;
-    display: block;
-    padding: 5px;
+    color: #1c1f4c;
+    margin-left: 10px;
 
 }
-.grad1{
-    background-image: linear-gradient(to right, #1c1f4c, #33aaac);
-    width: 320px;
-    height: 30px;
-}
-
