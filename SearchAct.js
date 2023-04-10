@@ -25,7 +25,7 @@ function searchStudent() {
         var found = false;
 
         for (var i = 0; i < students.length; i++) {
-            if (students[i].Firstname.toLowerCase().includes(name.toLowerCase()) && students[i].status == "Active") {
+            if (students[i].Firstname.toLowerCase()==name.toLowerCase() && students[i].status == "Active") {
             found = true;
             tableHtml += "<tr><td>" + students[i].Id + "</td><td>" + students[i].Firstname + "</td><td>" + students[i].Middlename + 
                          "</td><td>"+ students[i].Lastname + "</td><td>"+ students[i].gpa + "</td><td>"+ students[i].level +
