@@ -25,7 +25,7 @@
         <div class = "container1">
         <br>
         <!--<span style="font-style: oblique">-->
-        <h2 class = "grad1">Registration page</h2>
+        <h2 class = "grad1">Add New Student</h2>
         <br>
         <form onsubmit= "return validate()">
             <!--  User add a new student to the system. Student information includes id, ,-->
@@ -33,32 +33,56 @@
             <!--  mobile number-->
             <div>
                 <label> Firstname </label>
-                <input class="Name" type="text" name="firstname"  placeholder="Enter first name."required/>
+                <input class="Name" type="text" name="firstname"  placeholder="Enter First Name."required/>
                 <br>
             </div>
 
             <div>
-                <label> Middlename: </label>
-                <input class="Name" type="text" name="middlename"  placeholder="Enter middle name."required/>
+                <label> Middlename </label>
+                <input class="Name" type="text" name="middlename"  placeholder="Enter Middle Name."required/>
                 <br>
             </div>
                 
             <div>
-                <label> Lastname: </label>
-                <input class="Name" type="text" name="lastname" placeholder="Enter last name." required/>
+                <label> Lastname </label>
+                <input class="Name" type="text" name="lastname" placeholder="Enter Last Name." required/>
                 <br>
             </div>
             
             <div>
-                <label> ID: </label>
-                <input id="ID" type="text" name="id"  placeholder="Enter id."required/>
+                <label> ID </label>
+                <input id="ID" type="text" name="id"  placeholder="Enter Id."required/>
                 <br>
-
-
             </div>
             
             <div>
-                <label> Level :</label>
+                <label> GPA </label>
+                <input id="gpa" type="text" name="GPA"  placeholder="Enter GPA" size="6" required/>
+                <br>
+            </div>
+
+            <div>
+                <label>Phone </label>
+                <input id="short" type="text" name="country code"  value="+20" size="1" disabled/>
+                <input id="number" type="text" name="phone" size="10"placeholder="Enter Phone Number" maxlength="11"/>
+                <br>
+            </div>
+
+            <div>
+                <label for="birthday">Date of birth:</label>
+                <input id="date" type="date" id="birthday" name="birthday">
+                <br>
+            </div>
+           
+            <div>
+                <label >Email</label>
+                <input  id = "email" type = "email" placeholder="ID@stud.uni.edu.eg">
+                <br>
+                <div id ="msg1"></div>
+            </div>
+
+            <div>
+                <label> Level </label>
                 <select>
                     <option value="">-- choose a level--</option>
                     <option value="level1">level1</option>
@@ -70,7 +94,7 @@
             </div>
             
             <div>
-                <label> Department :</label>
+                <label> Department </label>
                 <select>
                     <option value="">-- choose a department--</option>
                     <option value="IS">IS</option>
@@ -80,13 +104,6 @@
                     <option value="AI">AI</option>
                 </select>
                 <br>
-            </div>
-
-            <div>
-                <label> GPA :</label>
-                <input id="gpa" type="text" name="GPA"  placeholder="Enter GPA." size="6" required/>
-                <br>
-
             </div>
 
             <div>
@@ -109,36 +126,7 @@
                 <br>
             </div>
 
-            <div>
-                <label>Phone :</label>
-                <input id="short" type="text" name="country code"  value="+20" size="1" disabled/>
-                <input id="number" type="text" name="phone" size="10"placeholder="phone number." maxlength="11"/>
-                <br>
-            </div>
-
-            <div>
-                <label for="birthday">Date of birth:</label>
-                <input id="date" type="date" id="birthday" name="birthday">
-                <br>
-            </div>
-           
-            <div>
-                <label >Email:</label>
-                <input  id = "email" type = "email" placeholder="ID@stud.uni.edu.eg">
-                <br>
-                <div id ="msg1"></div>
-            </div>
-
-            <div>
-                <label>Password:</label>
-                <input id="Pass" type="Password" placeholder="Enter a strong password "minlength="8" required>
-            </div>
-
-            <div>
-                <label>Confirm Password:</label>
-                <input  id="ppass" type="Password" placeholder="re-enter password"required>
-                <br>
-            </div>
+            
 
             <button class = "sub" type="submit">Update</button>
             <button class = "res" type="reset">Reset</button>
