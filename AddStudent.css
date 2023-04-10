@@ -52,7 +52,7 @@ button.sub:hover, button.res:hover{
     background: linear-gradient(to right,#1c1f4c, #33aaac);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    /*background-clip: 0;*/
+    background-clip: 0;
 }
 h2{
     font-family: garamond;
@@ -62,7 +62,7 @@ h2{
     color:#ffffff;
     border-radius: 15px;
     display: block;
-    padding: 5px;
+    padding: 7px;
     /*align:center;*/
 }
 #number{
@@ -101,7 +101,7 @@ p{
 }
 .grad1{
     background-image: linear-gradient(to right, #1c1f4c, #33aaac);
-    width: 320px;
+    width: 200px;
     height: 26px;
 }
 .grad2{
