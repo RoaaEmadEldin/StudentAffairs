@@ -45,6 +45,11 @@ button {
   border-radius: 5px;
 }
 h2{
+  background-image: linear-gradient(to right, #1c1f4c, #33aaac);
+  width: 260px;
+  height: 26px;
+  border-radius: 26px;
+  color: white;
   font-family: garamond;
-  margin-left: 10px;
+  margin-left: 3px;
 }
