@@ -14,7 +14,7 @@ function validate() {
     }
 
     let Checkgpa = document.getElementById("gpa").value;
-    const regex3 =  /\D/;//not a digit 
+    const regex3 =  /\D/;//not a digit
 
     if ((Checkgpa < 0 || Checkgpa > 4 ) && Checkgpa != ""||(regex3.test(Checkgpa))) {
         trueinfo = false;
@@ -45,7 +45,8 @@ function validate() {
 }
 
 function SaveStudent(){
-    let FN = document.getElementById("Name").value;
+    
+    let fullN = document.getElementById("name").value;
     let ID = document.getElementById("id").value;
     let L = document.getElementById("level").value;
     let D = document.getElementById("dep").value;
@@ -55,7 +56,7 @@ function SaveStudent(){
     let Ph = document.getElementById("phone").value;
     let Dob = document.getElementById("dob").value;
     let Em = document.getElementById("email").value;
-    let newstudent = new Student(FN, MN, LN, ID, Dob, S, Gpa, Gen, L, D, Em, Ph);
+    let newstudent = new Student(fullN, ID, Dob, S, Gpa, Gen, L, D, Em, Ph);
     Students.push(newstudent);
     localStorage.setItem('Students', JSON.stringify(Students));
 }
