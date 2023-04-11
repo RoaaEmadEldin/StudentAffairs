@@ -1,8 +1,6 @@
 class Student{
-    constructor(FirstName, MiddleName, LastName, ID, DateOfBirth, Status, GPA, Gender, Level, Department, Email, PhoneNumber){
-        this.FirstName = FirstName;
-        this.MiddleName = MiddleName;
-        this.LastName = LastName;
+    constructor(Name, ID, DateOfBirth, Status, GPA, Gender, Level, Department, Email, PhoneNumber){
+        this.Name = Name;
         this.ID = ID;
         this.DateOfBirth = DateOfBirth;
         this.Status = Status;
