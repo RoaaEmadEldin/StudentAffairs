@@ -14,9 +14,9 @@ function validate() {
     }
 
     let Checkgpa = document.getElementById("gpa").value;
-    const regex3 =  /\D/;//not a digit
+    const regex3 = /^([0-3](\.[0-9]{1,2})?|4(\.0{1,2})?)$/;
 
-    if ((Checkgpa < 0 || Checkgpa > 4 ) && Checkgpa != ""||(regex3.test(Checkgpa))) {
+    if (Checkgpa == "" || !regex3.test(Checkgpa)) {
         trueinfo = false;
         alert("Invalid GPA, Please Enter Valid GPA");
     }
@@ -45,8 +45,7 @@ function validate() {
 }
 
 function SaveStudent(){
-    
-    let fullN = document.getElementById("name").value;
+    let N = document.getElementById("name").value;
     let ID = document.getElementById("id").value;
     let L = document.getElementById("level").value;
     let D = document.getElementById("dep").value;
@@ -56,7 +55,7 @@ function SaveStudent(){
     let Ph = document.getElementById("phone").value;
     let Dob = document.getElementById("dob").value;
     let Em = document.getElementById("email").value;
-    let newstudent = new Student(fullN, ID, Dob, S, Gpa, Gen, L, D, Em, Ph);
+    let newstudent = new Student(N, ID, Dob, S, Gpa, Gen, L, D, Em, Ph);
     Students.push(newstudent);
     localStorage.setItem('Students', JSON.stringify(Students));
 }
