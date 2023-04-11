@@ -14,16 +14,18 @@ function validate() {
     }
 
     let Checkgpa = document.getElementById("gpa").value;
-    if ((Checkgpa < 0 || Checkgpa > 4) && Checkgpa != "") {
+    const regex3 =  /\D/;//not a digit 
+
+    if ((Checkgpa < 0 || Checkgpa > 4 ) && Checkgpa != ""||(regex3.test(Checkgpa))) {
         trueinfo = false;
         alert("Invalid GPA, Please Enter Valid GPA");
     }
 
-    let Checkname = document.getElementsByClassName("Name").value;
-    const regex2 = /[^A-Za-z]/g;
-    if (!regex2.test(Checkn) && Checkn != "") {
+    let Checkname = document.getElementById("name").value;
+    const regex2 = /^[a-zA-Z]+(?: [a-zA-Z]+){2}$/;;
+    if (!regex2.test(Checkname) && Checkname != "") {
         trueinfo = false;
-        alert("Invalid Name, Please Enter Valid Name");
+        alert("Invalid Name, Please enter your full name.");
     }
 
     let CheckPhone = document.getElementById("phone").value;
@@ -59,4 +61,3 @@ function SaveStudent(){
     Students.push(newstudent);
     localStorage.setItem('Students', JSON.stringify(Students));
 }
-   
