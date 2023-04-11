@@ -1,5 +1,5 @@
 function changeStatus(id) {
-    var status = document.querySelector("tr:nth-child(" + id + ") td:nth-child(4)");
+    var status = document.querySelector("tr:nth-child(" + id + ") td:nth-child(10)");
     if (status.classList.contains("active")) {
       status.classList.remove("active");
       status.classList.add("inactive");
