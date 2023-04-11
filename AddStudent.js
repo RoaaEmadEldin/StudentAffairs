@@ -45,9 +45,7 @@ function validate() {
 }
 
 function SaveStudent(){
-    let FN = document.getElementById("firstname").value;
-    let MN = document.getElementById("middlename").value;
-    let LN = document.getElementById("lastname").value;
+    let FN = document.getElementById("Name").value;
     let ID = document.getElementById("id").value;
     let L = document.getElementById("level").value;
     let D = document.getElementById("dep").value;
