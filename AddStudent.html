@@ -26,7 +26,7 @@
     <br>
     <h2 class = "grad1">Add New Student</h2>
     <br>
-    <form onsubmit= "return validate()">
+    <form onsubmit= "return Process()">
         <!--  User add a new student to the system. Student information includes id, ,-->
         <!--  date of birth, GPA, gender, level, status=”active”, “inactive”, department, email,-->
         <!--  mobile number-->
@@ -85,7 +85,7 @@
             <label> Department </label>
             <select id="dep">
                 <option value="">--Choose Department--</option>
-                <option value="G">General</option>
+                <option value="General">General</option>
                 <option value="IS">IS</option>
                 <option value="DS">DS</option>
                 <option value="CS">CS</option>
@@ -99,8 +99,8 @@
             <label>Gender</label>
             <select id="gender">
                 <option value = "--Choose Gender--" selected> --Choose Gender-- </option>
-                <option value = "F"> Female </option>
-                <option value = "M"> Male </option>
+                <option value = "Female"> Female </option>
+                <option value = "Male"> Male </option>
             </select>
             <br>
         </div>
@@ -115,7 +115,7 @@
             <br>
         </div>
 
-        <button class = "sub" type="submit" onclick="SaveStudent()">Add</button>
+        <button class = "sub" type="submit">Add</button>
         <button class = "res" type="reset">Reset</button>
         <br>
     </form>
