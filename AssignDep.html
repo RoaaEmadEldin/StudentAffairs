@@ -5,7 +5,9 @@
     <head>
         <link rel = "shortcut icon" type = "x-icon" href = "Icon.png">
         <link rel = "stylesheet" href = "NavBar&BG.css">
-        <link rel = "stylesheet" href = "AddStudent.css">
+        <link rel = "stylesheet" href = "AssignDep.css">
+        <script src = "AssignDep.js"></script>
+        
     </head>
     <body>
         <nav>
@@ -22,50 +24,37 @@
                 <li><a href = "ChangeStatus.html"target = "_blank">CHANGE STATUS</a></li>
             </ul>
         </nav>
-        <h2>Assign Department</h2>
-        <hr>
-        <p>Enter the Student's Information:</p>
-        <form>
+        <div class = "container1">
             <div>
-                <label>Name</label>
-                <input type = "text" name = "name">
-                <br>
-            </div>
-
-            <div>
-                <label>ID</label>
-                <input type = "number" name="id" required>
-                <br>
-            </div>
-
-            <div>
-                <label>Level</label>
-                <select required>
-                    <option value="">--Choose your Level--</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                <h2 class = "grad1">Assign Department</h2>
+                <p class = "grad2">Enter the Student's Information:</p>
+                <form onsubmit="return CallFunction()">
+                    <div>
+                        <label>ID</label>
+                        <input id = "ID" type = "number" name = "ID" required>
+                    </div>
+        
+                    <div>
+                        <label>Department</label>
+                        <select id = "dep" required>
+                            <option value = "" selected>--Choose a Department--</option>
+                            <option value = "IS">IS</option>
+                            <option value = "CS">CS</option>
+                            <option value = "IT">IT</option>
+                            <option value = "DS">DS</option>
+                            <option value = "AI">AI</option>
+                        </select>
+                    </div>
                     <br>
-                </select>
+                    <button class = "res" type = "reset">Reset</button>
+                    <button class = "sub" type = "submit">Assign</button>
+                </form>
             </div>
-
-            <div>
-                <label>Department</label>
-                <select required>
-                    <option value = "">--Choose a Department--</option>
-                    <option value = "IS">IS</option>
-                    <option value = "CS">CS</option>
-                    <option value = "IT">IT</option>
-                    <option value = "DS">DS</option>
-                    <option value = "AI">AI</option>
-                    <br>
-                </select>
-            </div>
-            <input style = "float:left;margin-left: 270px;color: white;background-color:black;" type="submit">
-        </form>
+        </div>
         <br><br>
-        <p>Copyright &copy; 2023 Student Affairs.</p>
-       
+        <script src = "Student.js"></script>
+        <script src = "Array.js"></script>
+        <script src = "AssignDep.js"></script>
+        <p class = "copyright">Copyright &copy; 2023 Student Affairs.</p>
     </body>
 </html>
