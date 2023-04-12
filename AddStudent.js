@@ -22,7 +22,7 @@ function validate() {
     }
 
     let Checkname = document.getElementById("name").value;
-    const regex2 = /^[a-zA-Z]+(?: [a-zA-Z]+){2}$/;;
+    const regex2 = /^[a-zA-Z.]+\s[a-zA-Z.]+\s[a-zA-Z.]+$/;
     if (!regex2.test(Checkname) && Checkname != "") {
         trueinfo = false;
         alert("Invalid Name, Please enter your full name.");
@@ -58,4 +58,12 @@ function SaveStudent(){
     let newstudent = new Student(N, ID, Dob, S, Gpa, Gen, L, D, Em, Ph);
     Students.push(newstudent);
     localStorage.setItem('Students', JSON.stringify(Students));
+}
+function Process(){
+    let success = false;
+    if(validate()){
+        SaveStudent();
+        success = true;
+    }
+    return success;
 }
