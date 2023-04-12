@@ -55,7 +55,7 @@ function UpdateStudent(){
     let Studentlevel = document.getElementById("level").value;
     let StudentDob = document.getElementById("date").value;
     let StudentStatus = document.getElementById("status").value;
-    let StudentGender = document.getElementById("gender");
+    let StudentGender = document.getElementById("gender").value;
     let Studentfound = false;
     for(let i = 0;i < Students.length;i++){
         if(Studentid == Students[i].ID){
@@ -111,3 +111,20 @@ function DeleteStudent(){
         alert("There is no Student with this Id to be Deleted")
     }
 }
+function Process1(){
+    let success = false;
+    if(CheckInfo1()){
+        UpdateStudent()
+        success = true;
+    }
+    return success;
+}
+function Process2(){
+    let success = false;
+    if(CheckInfo2()){
+        DeleteStudent()
+        success = true;
+    }
+    return success;
+}
+
