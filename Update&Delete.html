@@ -48,7 +48,7 @@
     
                 <div>
                     <label>Mobile Number</label>
-                    <input id="number" type = "number" placeholder = "01#########">
+                    <input id="phone" type = "number" placeholder = "01#########">
                 </div>
     
                 <div>
@@ -58,7 +58,7 @@
                 
                 <div>
                     <label>Level</label>
-                    <select>
+                    <select id = "level">
                         <option selected> --Choose Level-- </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -69,7 +69,7 @@
                 
                 <div>
                     <label>Status</label>
-                    <select>
+                    <select id = "status">
                         <option selected> --Choose Activeness-- </option>
                         <option> Active </option>
                         <option> Inactive </option>
@@ -78,13 +78,13 @@
                 
                 <div>
                     <label>Gender</label>
-                    <select>
+                    <select id = "gender">
                         <option selected> --Choose Gender-- </option>
                         <option> Female </option>
                         <option> Male </option>
                     </select>
                 </div>
-                <button class = "sub" type="submit">Update</button>
+                <button class = "sub" type="submit" onclick="UpdateStudent()">Update</button>
                 <button class = "res" type="reset">Reset</button>
             </form>
           </div>
@@ -99,11 +99,14 @@
                     <label>ID</label>
                     <input id = "ID2" type="number"required>
                 </div>
-                <button class = "sub" type="submit">Delete</button>    
+                <button class = "sub" type="submit" onclick="DeleteStudent()">Delete</button>    
                 <button class = "res" type="reset">Reset</button>
             </form>
           </div>     
         </div>
+        <script src = "Student.js"></script>
+        <script src = "Array.js"></script>
+        <script src = "Update&Delete.js"></script>
         <p class = "copyright">Copyright &copy; 2023  Student Affairs.</p>
     </body>
 </html>
