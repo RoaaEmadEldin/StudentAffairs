@@ -31,7 +31,7 @@ function validate() {
     }
     
     let CheckPhone = document.getElementById("phone").value;
-    if ((CheckPhone.length != 11 || CheckE[0] != 0 || CheckE[1] != 1) && CheckPhone != "") {
+    if ((CheckPhone.length != 11 || CheckPhone[0] != 0 || CheckPhone[1] != 1) && CheckPhone != "") {
         alert("Invalid Mobile Number, Please Enter Valid Mobile Number");
         return false;
     }
@@ -55,7 +55,7 @@ function SaveStudent(){
     let Ph = document.getElementById("phone").value;
     let Dob = document.getElementById("dob").value;
     let Em = document.getElementById("email").value;
-    form.addEventListener("submit", function(event){
+    form.addEventListener("submit", function(){
         let info = validate();
         if(info){
             let newstudent = new Student(N, ID, Dob, S, Gpa, Gen, L, D, Em, Ph);
@@ -65,4 +65,3 @@ function SaveStudent(){
     });
     
 }
-
