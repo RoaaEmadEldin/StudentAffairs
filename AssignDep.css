@@ -40,16 +40,14 @@ button{
     background-image: linear-gradient(to right, #1c1f4c, #33aaac);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    display: inline;
+    
 }
 button.sub{
-    margin-right: 0px;
-    margin-left: 55%;
+    margin-left: 550px;
     cursor: pointer;
 }
 button.res{
-    margin-left: 10%;
-    margin-right: 0px;
+    margin-left: 0px;
     cursor: pointer;
 }
 button.sub:hover, button.res:hover{
