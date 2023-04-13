@@ -61,10 +61,10 @@ function createStudentRow(student) {
  statusButton.innerHTML = "Change Status";
  statusButton.addEventListener("click", function() {
  var newStatus;
- if (student.Status === "active") {
-   newStatus = "inactive";
+ if (student.Status === "Active") {
+   newStatus = "Inactive";
   } else {
-  newStatus = "active";
+  newStatus = "Active";
  }
  updateStudentStatus(student.ID, newStatus);
  student.Status = newStatus;
