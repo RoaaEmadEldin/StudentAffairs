@@ -69,6 +69,7 @@ function createStudentRow(student) {
  updateStudentStatus(student.ID, newStatus);
  student.Status = newStatus;
  statusCell.innerHTML = newStatus;
+ check_Act_InAct_Student();
  });
  actionCell.appendChild(statusButton);
  row.appendChild(actionCell);
