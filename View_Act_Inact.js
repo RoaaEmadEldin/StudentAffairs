@@ -4,7 +4,7 @@ function check_Act_InAct_Student() {
     var activeTable = document.querySelector(".active");
     var inactiveTable = document.querySelector(".inActive");
     for (var i = 0; i < students.length; i++) {
-        if (students[i].Status === "active") {
+        if (students[i].Status === "active" || students[i].Status === "Active") {
             var activeRow = "<tr>" +
                 "<td>" + students[i].ID + "</td> <td>" + students[i].Name + "</td> <td>"+ students[i].GPA +
                 "</td> <td>" + students[i].Level + "</td> <td>"+ students[i].Department +
