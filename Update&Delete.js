@@ -36,13 +36,12 @@ function CheckInfo1(){
     return true;
 }
 function CheckInfo2(){
-    let trueinfo = true;
     let Checkid = document.getElementById("ID2").value;
     if(Checkid.length != 8 ){
-        trueinfo = false;
         alert("Invalid ID, Please Enter Valid ID");
+        return false;
     }
-    return trueinfo;
+    return true;
 }
 function UpdateStudent(){
     let updForm = document.getElementById("update");
@@ -61,33 +60,33 @@ function UpdateStudent(){
         if(updinfo){
             let Studentfound = false;
             for(let i = 0;i < Students.length;i++){
-        if(Studentid == Students[i].ID){
-            Studentfound = true;
-            if(Studentgpa != ""){
-                Students[i].GPA = Studentgpa;
-            }
-            if(Studentname != ""){
-                Students[i].Name = Studentname;
-            }
-            if(Studentemail != ""){
-                Students[i].Email = Studentemail;
-            }
-            if(Studentphone != ""){
-                Students[i].PhoneNumber = Studentphone;
-            }
-            if(Studentlevel != ""){
-                Students[i].Level = Studentlevel;
-            }
-            if(StudentDob != ""){
-                Students[i].DateOfBirth = StudentDob;
-            }
-            if(StudentStatus != ""){
-                Students[i].Status = StudentStatus;
-            }
-            if(StudentGender != ""){
-                Students[i].Gender = StudentGender;
-            }
-        }
+                if(Studentid == Students[i].ID){
+                    Studentfound = true;
+                    if(Studentgpa != ""){
+                        Students[i].GPA = Studentgpa;
+                    }
+                    if(Studentname != ""){
+                        Students[i].Name = Studentname;
+                    }
+                    if(Studentemail != ""){
+                        Students[i].Email = Studentemail;
+                    }
+                    if(Studentphone != ""){
+                        Students[i].PhoneNumber = Studentphone;
+                    }
+                    if(Studentlevel != "" && Studentlevel != "--Choose Level--"){
+                        Students[i].Level = Studentlevel;
+                    }
+                    if(StudentDob != ""){
+                        Students[i].DateOfBirth = StudentDob;
+                    }
+                    if(StudentStatus != "" && StudentStatus != "--Choose Activeness--"){
+                        Students[i].Status = StudentStatus;
+                    }
+                    if(StudentGender != "" && StudentGender != "--Choose Gender--"){
+                        Students[i].Gender = StudentGender;
+                    }
+                }
             }
             if(Studentfound){
                 localStorage.setItem("Students", JSON.stringify(Students));
@@ -103,7 +102,7 @@ function DeleteStudent(){
     let delForm = document.getElementById("delete");
     let Students = JSON.parse(localStorage.getItem("Students"));
     let Studentid = document.getElementById("ID2").value; 
-    delForm.addEventListener("submit", function(event){
+    delForm.addEventListener("submit", function(){
         let delinfo = CheckInfo2();
         if(delinfo){
             let Studentfound = false;
@@ -123,5 +122,3 @@ function DeleteStudent(){
         }
     });
 }
-
-
