@@ -3,76 +3,23 @@
 <html>
     <head>
         <link rel = "shortcut icon" type = "x-icon" href = "Icon4.png">
-        <style>
-            body {
-                padding: 00px;
-                margin: 00px;
-                background-image: url(BG.jpg);
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: 100% 100%;
-            } 
-            form {
-			background-color: #fff;
-			padding: 20px;
-			border-radius: 5px;
-			box-shadow: 0px 0px 5px 0px #ccc;
-			width: 50%;
-			margin: auto;
-		}
-		
-		h1, h2 {
-			text-align: center;
-            font-family: garamond;
-            color:cornflowerblue;
-		}
-		
-		label {
-			display: block;
-			margin-bottom: 10px;
-			font-weight: bold;
-		}
-		
-		input[type=text], select {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-		}
-		
-		input[type=submit] {
-			background-color: cornflowerblue;
-			color: #fff;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			float: right;
-            margin-top: 30px;
-		}
-		
-		input[type=submit]:hover {
-           
-			background-color: #1c1f4c;
-		}
-
-        </style>
+		<link rel = "stylesheet" href = "LogIn.css">
+		<script src="LogIn.js"></script>
     </head>
     <body>
-        <h1>Welcome to STUD</h1>
+        <h1>Welcome to Student Affairs</h1>
         <br>
         <h2>LOG IN</h2>
-        <form name = "frmloginpage" action = "Choose.html" target="_blank">
-            <label for="course" style="font-family: garamond;">Email</label>
-            <input type="email" placeholder="Name@uni.cu.edu.eg" required>
-            <label for = "password"style="font-family: garamond;"> Password</label>
-            <input type="password" required>
-            <input type = "submit" value="LOG IN">
-        </form>
-        
+		<div class = "container1">
+			<form id="loginForm">
+				<label>Email</label>
+				<input id="email" type="email" placeholder="ID@studaff.uni.edu.eg" required>
+				<label>Password</label>
+				<input id="pass" type="password" required>
+                <button id = "login" type="submit" onclick="validate()">Update</button>
+			</form>
+		</div>
+
         <br><br><br>
         
     </body>
