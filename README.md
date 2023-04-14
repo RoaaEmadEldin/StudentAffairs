@@ -27,7 +27,7 @@ in a formatted design and change the statue of students.
 <li>To learn how to deal with locale storage.</li>
 <li>To inhance teamwork.</li>
 
-# Versions:
+# Versions
 <li><b> Version1: </b> Applying html concepts and take a look in CSS.</li>
 <li><b> Version2(current): </b> Applying CSS & JS consepts and link all info with locale storage.</li>
 <li><b> Version3(Upcoming): </b> Link all this pages with a database.</li>
