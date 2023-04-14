@@ -1,12 +1,12 @@
 # StudentAffairs
 <b>We developed a website for student affairs </b><br>
-Made by: @mariamayman10 - @habibaihab - @RanaImara22 - @RoaaEmadEldin - @oaya2411.
+Made by: mariamayman10 - habibaihab - RanaImara22 - RoaaEmadEldin - oaya2411.
 
-#Web Site Purpose
+# Web Site Purpose <br>
 It mainly for affairs staff to add new comers or display student's info and starts to update, change status, assign department, display all students with their info<br>
 in a formatted design and change the statue of students. 
 
-#WebSite Structure
+# WebSite Structure<br>
 <b>the web site contains of 9 pages whaich are:</b><br>
 <ul>Home page: to get a quick vision about the site and its purpose.</ul>
 <ul>Register: this is to add new comers and store their info in locale storage.</ul>
