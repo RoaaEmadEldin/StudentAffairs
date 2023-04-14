@@ -1,6 +1,10 @@
 # StudentAffairs
 <b>We developed a website for student affairs </b><br>
-Made by: <a href = "https://github.com/mariamayman10" target="_blank">mariamayman10</a> - habibaihab - oaya2411 - RanaImara22 - RoaaEmadEldin.
+Made by: <a href = "https://github.com/mariamayman10" target="_blank">Mariam Ayman</a> -
+<a href = "https://github.com/habibaihab" target="_blank">Habiba Ihab</a> - 
+<a href = "https://github.com/oaya2411" target="_blank">Aya Osama </a> -
+<a href = "https://github.com/RanaImara22" target = "_blank">Rana Imara </a>- 
+<a href = "https://github.com/RoaaEmadEldin" target = "_blank">Roaa Emad Eldin.</a>
 
 # Web Site Purpose <br>
 It mainly for affairs staff to add new comers or display student's info and starts to update, change status, assign department, display all students with their info
