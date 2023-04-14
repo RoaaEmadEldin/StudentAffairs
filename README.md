@@ -7,7 +7,7 @@ Made by: <a href = "https://github.com/mariamayman10" target="_blank">Mariam Aym
 <a href = "https://github.com/RoaaEmadEldin" target = "_blank">Roaa Emad Eldin.</a>
 
 # Web Site Purpose <br>
-It mainly for affairs staff to add new comers or display student's info and starts to update, change status, assign department, display all students with their info
+It mainly for affairs staff to add new comers or display student's info and start to update, change status, assign department, display all students with their info
 in a formatted design and change the statue of students. 
 
 # WebSite Structure<br>
