@@ -1,6 +1,6 @@
 # StudentAffairs
 <b>We developed a website for student affairs </b><br>
-Made by: mariamayman10 - habibaihab - oaya2411 - RanaImara22 - RoaaEmadEldin.
+Made by: <a href = "https://github.com/mariamayman10" target="_blank">mariamayman10</a> - habibaihab - oaya2411 - RanaImara22 - RoaaEmadEldin.
 
 # Web Site Purpose <br>
 It mainly for affairs staff to add new comers or display student's info and starts to update, change status, assign department, display all students with their info
