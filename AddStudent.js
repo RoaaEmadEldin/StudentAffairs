@@ -29,8 +29,17 @@ function validate() {
             alert("Invalid GPA, Please Enter Valid GPA");
             return false;
         }
-        const regex = /^[0-9]+@stud.uni.edu.eg$/;
-        if (!regex.test(CheckEmail)) {
+        const regex1 = /^[0-9]+@stud.uni.edu.eg$/;
+        let id = "";
+        for(let i = 0;i < CheckEmail.length;i++){
+            if(CheckEmail[i] != '@'){
+                id += CheckEmail[i];
+            }
+            else{
+                break;
+            }
+        }
+        if((!regex1.test(CheckEmail)) || (id != Checkid)){
             alert("Invalid Email, Please Enter Valid Email");
             return false;
         }
@@ -40,8 +49,7 @@ function validate() {
             alert("Invalid Date, Please Enter Valid Date");
             return false;
         }
-        
-        if (CheckPhone.length != 11 || CheckPhone[0] != 0 || CheckPhone[1] != 1) {
+        if((CheckPhone.length != 11 || CheckPhone[0] != 0 || CheckPhone[1] != 1 || (CheckPhone[2] != 1 && CheckPhone[2] != 2 && CheckPhone[2] != 0 && CheckPhone[2] != 5))){
             alert("Invalid Mobile Number, Please Enter Valid Mobile Number");
             return false;
         }
