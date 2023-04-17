@@ -17,12 +17,21 @@ function CheckInfo1(){
     }
     let CheckE = document.getElementById("email").value;
     const regex1 = /^[0-9]+@stud.uni.edu.eg$/;
-    if(!regex1.test(CheckE) && CheckE != ""){
+    let id;
+    for(let i = 0;i < CheckE.length;i++){
+        if(CheckE[i] != '@'){
+            id += CheckE[i];
+        }
+        else{
+            break;
+        }
+    }
+    if((!regex1.test(CheckE) && CheckE != "") || (id != Checkid && CheckE != "")){
         alert("Invalid Email, Please Enter Valid Email");
         return false;
     }
     let CheckPhone = document.getElementById("phone").value;
-    if((CheckPhone.length != 11 || CheckE[0] != 0 || CheckE[1] != 1) && CheckPhone != ""){
+    if((CheckPhone.length != 11 || CheckPhone[0] != 0 || CheckPhone[1] != 1 || (CheckPhone[3] != 1 && CheckPhone[3] != 2 && CheckPhone[3] != 0 && CheckPhone[3] != 5)) && CheckPhone != ""){
         alert("Invalid Mobile Number, Please Enter Valid Mobile Number");
         return false;
     }
@@ -43,82 +52,93 @@ function CheckInfo2(){
     }
     return true;
 }
-function UpdateStudent(){
-    let updForm = document.getElementById("update");
-    let Students = JSON.parse(localStorage.getItem("Students"));
-    let Studentid = document.getElementById("ID").value;
-    let Studentgpa = document.getElementById("gpa").value;
-    let Studentname = document.getElementById("Name").value;
-    let Studentemail = document.getElementById("email").value;
-    let Studentphone = document.getElementById("phone").value;
-    let Studentlevel = document.getElementById("level").value;
-    let StudentDob = document.getElementById("date").value;
-    let StudentStatus = document.getElementById("status").value;
-    let StudentGender = document.getElementById("gender").value;
-    updForm.addEventListener("submit", function(event){
-        let updinfo = CheckInfo1();
-        if(updinfo){
-            let Studentfound = false;
-            for(let i = 0;i < Students.length;i++){
-                if(Studentid == Students[i].ID){
-                    Studentfound = true;
-                    if(Studentgpa != ""){
-                        Students[i].GPA = Studentgpa;
-                    }
-                    if(Studentname != ""){
-                        Students[i].Name = Studentname;
-                    }
-                    if(Studentemail != ""){
-                        Students[i].Email = Studentemail;
-                    }
-                    if(Studentphone != ""){
-                        Students[i].PhoneNumber = Studentphone;
-                    }
-                    if(Studentlevel != "" && Studentlevel != "--Choose Level--"){
-                        Students[i].Level = Studentlevel;
-                    }
-                    if(StudentDob != ""){
-                        Students[i].DateOfBirth = StudentDob;
-                    }
-                    if(StudentStatus != "" && StudentStatus != "--Choose Activeness--"){
-                        Students[i].Status = StudentStatus;
-                    }
-                    if(StudentGender != "" && StudentGender != "--Choose Gender--"){
-                        Students[i].Gender = StudentGender;
-                    }
+function submitform1(event){
+    event.preventDefault();
+    let updinfo = CheckInfo1();
+    if(updinfo){
+        let updForm = document.getElementById("update");
+        let Students = JSON.parse(localStorage.getItem("Students"));
+        let Studentid = document.getElementById("ID").value;
+        let Studentgpa = document.getElementById("gpa").value;
+        let Studentname = document.getElementById("Name").value;
+        let Studentemail = document.getElementById("email").value;
+        let Studentphone = document.getElementById("phone").value;
+        let Studentlevel = document.getElementById("level").value;
+        let StudentDob = document.getElementById("date").value;
+        let StudentStatus = document.getElementById("status").value;
+        let StudentGender = document.getElementById("gender").value;
+        let Studentfound = false;
+        for(let i = 0;i < Students.length;i++){
+            if(Studentid == Students[i].ID){
+                Studentfound = true;
+                if(Studentgpa != ""){
+                    Students[i].GPA = Studentgpa;
+                }
+                if(Studentname != ""){
+                    Students[i].Name = Studentname;
+                }
+                if(Studentemail != ""){
+                    Students[i].Email = Studentemail;
+                }
+                if(Studentphone != ""){
+                    Students[i].PhoneNumber = Studentphone;
+                }
+                if(Studentlevel != "" && Studentlevel != "--Choose Level--"){
+                    Students[i].Level = Studentlevel;
+                }
+                if(StudentDob != ""){
+                    Students[i].DateOfBirth = StudentDob;
+                }
+                if(StudentStatus != "" && StudentStatus != "--Choose Activeness--"){
+                    Students[i].Status = StudentStatus;
+                }
+                if(StudentGender != "" && StudentGender != "--Choose Gender--"){
+                    Students[i].Gender = StudentGender;
                 }
             }
-            if(Studentfound){
-                localStorage.setItem("Students", JSON.stringify(Students));
-            }
-            else{
-                alert("There is no Student with this Id to be Updated")
+        }
+        if(Studentfound){
+            confirm("Are you sure about updating the student's data?")
+            localStorage.setItem("Students", JSON.stringify(Students));
+        }
+        else{
+            alert("There is no Student with this Id to be Updated")
+        }
+        updForm.reset(); 
+    }
+}
+function UpdateStudent(){
+    let updForm = document.getElementById("update");
+    updForm.addEventListener("submit", submitform1);
+}
+function submitform2(event){
+    event.preventDefault();
+    let delinfo = CheckInfo2();
+    if(delinfo){
+        let delForm = document.getElementById("delete");
+        let Students = JSON.parse(localStorage.getItem("Students"));
+        let Studentid = document.getElementById("ID2").value; 
+        let Studentfound = false;
+        for(let i = 0;i < Students.length;i++){
+            if(Students[i].ID == Studentid){
+                Students = Students.filter((element, index) => index != i);
+                Studentfound = true;
+                break;
             }
         }
-    });
-    
+        if(Studentfound){
+            confirm("Are you sure about deleting the student's data?")
+            localStorage.setItem("Students", JSON.stringify(Students));
+        }
+        else{
+            alert("There is no Student with this Id to be Deleted")
+        }
+        delForm.reset();
+    }
 }
 function DeleteStudent(){
     let delForm = document.getElementById("delete");
-    let Students = JSON.parse(localStorage.getItem("Students"));
-    let Studentid = document.getElementById("ID2").value; 
-    delForm.addEventListener("submit", function(){
-        let delinfo = CheckInfo2();
-        if(delinfo){
-            let Studentfound = false;
-            for(let i = 0;i < Students.length;i++){
-                if(Students[i].ID == Studentid){
-                    Students = Students.filter((element, index) => index != i);
-                    Studentfound = true;
-                    break;
-                }
-            }
-            if(Studentfound){
-                localStorage.setItem("Students", JSON.stringify(Students));
-            }
-            else{
-                alert("There is no Student with this Id to be Deleted")
-            }
-        }
-    });
+    delForm.addEventListener("submit", submitform2);
 }
+
+
