@@ -127,8 +127,9 @@ function submitform2(event){
             }
         }
         if(Studentfound){
-            confirm("Are you sure about deleting the student's data?")
+            if(confirm("Are you sure about deleting the student's data?")){
             localStorage.setItem("Students", JSON.stringify(Students));
+        }
         }
         else{
             alert("There is no Student with this Id to be Deleted")
