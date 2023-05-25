@@ -1,12 +1,17 @@
-function CheckInfo(){
-    let trueinfo = true;
-    let Checkid = document.getElementById("ID").value;
-    if (Checkid.length < 8){
-        let div = document.getElementById("CheckID");
-        div.style.display = "block";
-        div.innerText = "Invalid ID, Please Make Sure ID Consists Of 8 Numbers.";
-        trueinfo = false;
-
-    }
-    return trueinfo;
-}
+$(document).on('submit', '#assignForm', function(event){
+    event.preventDefault();
+    $.ajax({
+        type:'POST',
+        url:'/Assign',
+        data:{
+            id: $('#ID').val(),
+            department: $('#dep').val(),
+            csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+        },
+        success: function(data){
+            $('#successMessages').html(data).show();
+        }
+        
+        
+    });
+});
