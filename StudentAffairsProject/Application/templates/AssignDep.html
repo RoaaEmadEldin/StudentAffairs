@@ -6,6 +6,7 @@
         <link rel = "shortcut icon" type = "x-icon" href = "{% static 'images/Icon.png' %}">
         <link rel = "stylesheet" href = "{% static 'css/NavBar&BG.css' %}">
         <link rel = "stylesheet" href = "{% static 'css/AssignDep.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src = "{% static 'js/AssignDep.js' %}"></script>
         
     </head>
@@ -28,27 +29,9 @@
             <div>
                 <h2 class = "grad1">Assign Department</h2>
                 <p class = "grad2">Enter the Student's Information:</p>
-
-                {% for message in messagesList %}
-                <div role = "alert" class = errorMessages>{{ message }}</div>
-                {% endfor %}
-
-                <div  role = "alert" id = CheckID
-                style = "display: none;
-                background-color: rgb(240, 128, 128);
-                box-shadow: 0px 0px 10px 0px rgba(28, 31, 76, 0.7);
-                width: 450px;
-                height: 20px;
-                padding-left: 10px;
-                font-weight: 800;
-                font-family: garamond;
-                margin-left: 60px;"></div>
-
-                {% for msg in successMessage %}
-                <div role = "alert" class = successMessages>{{ msg }}</div>
-                {% endfor %}
-                
-                <form id = "assignForm" onsubmit = "return CheckInfo()" action = "{% url 'Assign' 0 'Department' %}">
+                <div id = "successMessages"></div>
+                <form id = "assignForm">
+                    {% csrf_token %}
                     <div>
                         <label>ID</label>
                         <input id = "ID" type = "number" name = "ID" required>
@@ -72,7 +55,6 @@
             </div>
         </div>
         <br><br>
-        <script src = "{% static 'js/AssignDep.js' %}"></script>
         <p class = "copyright">Copyright &copy; 2023 Student Affairs.</p>
     </body>
 </html>
