@@ -15,28 +15,25 @@ def AssignDep(request):
     template = loader.get_template('AssignDep.html')
     return HttpResponse(template.render({}, request))
 
-def Assign(request, ID, Department):
-    StudentID = request.GET.get("ID")
-    StudentDep = request.GET.get("Department")
-    messagesList = []
-    successMessage = []
-    try:
-        student = Student.objects.get(student_id = StudentID)
-    except Student.DoesNotExist:
-        messagesList.clear()
-        successMessage.clear()
-        messagesList.append("There is no such Student with the provided ID")
-        return render(request, 'AssignDep.html', {'messagesList': messagesList})
+def Assign(request):
+    if (request.method == 'POST'):
+        StudentID = request.POST['id']
+        StudentDep = request.POST['department']
+        if (len(StudentID) < 8):
+            error = 'Invalid ID, Please Make Sure ID Consists Of 8 Numbers.'
+            return HttpResponse(error)
+        try:
+            student = Student.objects.get(student_id = StudentID)
+        except Student.DoesNotExist:
+            error = 'There is no such Student with the provided ID'
+            return HttpResponse(error)
 
-    if (student.level > 2):
-        student.department = StudentDep
-        student.save()
-        messagesList.clear()
-        successMessage.clear()
-        successMessage.append("Department is Assigned Successfully")
-        return render(request, 'AssignDep.html', {'successMessage': successMessage})
+        if (student.level > 2):
+            student.department = StudentDep
+            student.save()
+            success = 'Department is Assigned Successfully'
+            return HttpResponse(success)
 
-    messagesList.clear()
-    successMessage.clear()
-    messagesList.append("The Studnet's Level is Less than 2, Can't Assign a Department!")
-    return render(request, 'AssignDep.html', {'messagesList': messagesList})
+        error = 'The Studnet\'s Level is Less than 2, Can\'t Assign a Department!'
+        return HttpResponse(error)
+
