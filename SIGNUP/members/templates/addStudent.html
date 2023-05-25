@@ -32,6 +32,20 @@
             <br>
             <h2 class = "grad1">Add New Student</h2>
             <br>
+           
+        {% if messages %}
+       <ul class="messages" id="messagel">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" style="color:black; background-color: rgb(240, 128, 128);
+            box-shadow: 0px 0px 10px 0px rgba(28, 31, 76, 0.7); 
+            width: 450px;
+            height: 20px; 
+            padding-left: 10px;
+            font-weight: 800;
+            margin-left: 60px;" {%endif %}>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
             <!-- onsubmit="return validate(); -->
             <form id = "myForm" method="post" action="{% url 'addstudent' %}" >
                 {% csrf_token %}
@@ -48,7 +62,7 @@
                     <input id="id" type="text" name="student_id"  placeholder="Enter Id"required/>
                     <br>
                 </div>
-
+                
                 <div>
                     <label> GPA </label>
                     <input id="gpa" type="text" name="gpa"  placeholder="Enter GPA" size="6" required/>
