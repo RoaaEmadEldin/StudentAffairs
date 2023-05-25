@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    {% load static %}
+    <head>
+        <link rel = "shortcut icon" type = "x-icon" href = "{% static 'images/Icon.png' %}">
+        <link rel = "stylesheet" href = "{% static 'css/NavBar&BG.css' %}">
+        <link rel = "stylesheet" href = "{% static 'css/AssignDep.css' %}">
+        <script src = "{% static 'js/AssignDep.js' %}"></script>
+        
+    </head>
+    <body>
+        <nav>
+            <div>
+                <div><a href = "" target="_blank"><img  class = "logo" src = "{% static 'images/Logo.png' %}"></a></div>
+            </div>
+            <ul>
+                <li><a href = "" target = "_blank">HOME</a></li>
+                <li><a href = "AddStudent.html" target = "_blank">ADD STUDENT</a></li>
+                <li><a href = "Update&Delete.html" target = "_blank">UPDATE/DELETE</a></li>
+                <li><a href = "SearchAct.html"target = "_blank">SEARCH FOR ACT STDs</a></li>
+                <li><a href = "/AssignDep/"target = "_blank">ASSIGN DEP</a></li>
+                <li><a href = "View_Act_Inact.html"target = "_blank">VIEW ACT/INACT STDs</a></li>
+                <li><a href = "ChangeStatus.html"target = "_blank">CHANGE STATUS</a></li>
+            </ul>
+        </nav>
+        <div class = "container1">
+            <div>
+                <h2 class = "grad1">Assign Department</h2>
+                <p class = "grad2">Enter the Student's Information:</p>
+
+                {% for message in messagesList %}
+                <div role = "alert" class = errorMessages>{{ message }}</div>
+                {% endfor %}
+
+                <div  role = "alert" id = CheckID
+                style = "display: none;
+                background-color: rgb(240, 128, 128);
+                box-shadow: 0px 0px 10px 0px rgba(28, 31, 76, 0.7);
+                width: 450px;
+                height: 20px;
+                padding-left: 10px;
+                font-weight: 800;
+                font-family: garamond;
+                margin-left: 60px;"></div>
+
+                {% for msg in successMessage %}
+                <div role = "alert" class = successMessages>{{ msg }}</div>
+                {% endfor %}
+                
+                <form id = "assignForm" onsubmit = "return CheckInfo()" action = "{% url 'Assign' 0 'Department' %}">
+                    <div>
+                        <label>ID</label>
+                        <input id = "ID" type = "number" name = "ID" required>
+    
+                    </div>
+                    <div>
+                        <label>Department</label>
+                        <select id = "dep" name = "Department" required>
+                            <option value = "" selected>--Choose a Department--</option>
+                            <option value = "IS">IS</option>
+                            <option value = "CS">CS</option>
+                            <option value = "IT">IT</option>
+                            <option value = "DS">DS</option>
+                            <option value = "AI">AI</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button class = "sub" type = "submit">Assign</button>
+                    <button class = "res" type = "reset">Reset</button>
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <script src = "{% static 'js/AssignDep.js' %}"></script>
+        <p class = "copyright">Copyright &copy; 2023 Student Affairs.</p>
+    </body>
+</html>
