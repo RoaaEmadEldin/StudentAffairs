@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "shortcut icon" type = "x-icon" href = "{% static 'Icon.png' %}">
+        <link rel = "stylesheet" href = "{% static 'css/NavBar&BG.css' %}">
+        <link rel = "stylesheet" href = "{% static 'css/HomePageSA.css' %}">
+    </head>
+    <body>
+        <nav>
+            <div>
+                <div><a href="{% url 'homepage:homepage' %}"><img class="logo" src="{% static 'Logo.png' %}"></a></div>
+            </div>
+            <ul>
+                <li><a href="{% url 'homepage:homepage' %}">HOME</a></li>
+                <li><a href="{% url 'add:addstudent' %}">ADD STUDENT</a></li>
+                <li><a href="{% url 'update_delete:updatedelete' %}">UPDATE/DELETE</a></li>
+                <li><a href="{% url 'searchactive:search' %}">SEARCH FOR ACT STDs</a></li>
+                <li><a href="{% url 'assigndep:assigndep' %}">ASSIGN DEP</a></li>
+                <li><a href="{% url 'view_in_active:viewin_active' %}">VIEW ACT/INACT STDs</a></li>
+                <li><a href="{% url 'changestatus:changestatus' %}">CHANGE STATUS</a></li>
+            </ul>
+        </nav>
+        <img src="{% static '1.png' %}">
+        <img src="{% static '2.png' %}">
+        <img src="{% static '3.png' %}">
+        <img src="{% static '4.png' %}">
+        <img src="{% static '5.png' %}">
+
+        <!--<p>This site has been providing student affairs professionals with all the resources they need to effectively offer services<br> and support to enhance student growth and development. This site is specifically for students from Qatar university.<br> Each student will receive his mail from affairs staff after they organize those things. Only affairs staff can access <br>the navigation of "view all active/inactive students". Students can update, delete his information and select their <br>major any time. Be careful with dealing with delete section because data deleted won't be easy to be accessed again.</p>-->
+        <footer>
+            <p class = "copyright">Copyright &copy; 2023 Student Affairs</p>
+        </footer>
+    </body>
+</html>

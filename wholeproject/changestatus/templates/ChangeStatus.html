@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="x-icon" href="{% static 'Icon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/NavBar&BG.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ChangeStatus.css' %}">
+</head>
+<body>
+    <nav>
+        <div>
+            <div><a href="{% url 'homepage:homepage' %}"><img class="logo" src="{% static 'Logo.png' %}"></a></div>
+        </div>
+        <ul>
+            <li><a href="{% url 'homepage:homepage' %}">HOME</a></li>
+            <li><a href="{% url 'add:addstudent' %}">ADD STUDENT</a></li>
+            <li><a href="{% url 'update_delete:updatedelete' %}">UPDATE/DELETE</a></li>
+            <li><a href="{% url 'searchactive:search' %}">SEARCH FOR ACT STDs</a></li>
+            <li><a href="{% url 'assigndep:assigndep' %}">ASSIGN DEP</a></li>
+            <li><a href="{% url 'view_in_active:viewin_active' %}">VIEW ACT/INACT STDs</a></li>
+            <li><a href="{% url 'changestatus:changestatus' %}">CHANGE STATUS</a></li>
+        </ul>
+    </nav>
+
+    <h2>Change Student Status</h2>
+
+    <table>
+        <thead>
+             <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Date of Birth</th>
+                <th>Status</th>
+                <th>GPA</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Level</th>
+                <th>Phone Number</th>
+                <th>Action</th>
+            </tr>
+           
+        </thead>
+        <tbody id="studentsTableBody">
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.student_id }}</td>
+                    <td>{{ student.dob }}</td>
+                    <td data-field="status" data-student-id="{{ student.student_id }}">{{ student.status }}</td>
+                    <td>{{ student.gpa }}</td>
+                    <td>{{ student.department }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.gender }}</td>
+                    <td>{{ student.level }}</td>
+                    <td>{{ student.phone_number }}</td>
+                    <td>
+                        <form method="POST" class="status-form">
+                            {% csrf_token %}
+                            <input type="hidden" name="student_id" value="{{ student.student_id }}">
+                            <button type="submit" class="change-status-button" data-student-id="{{ student.student_id }}">Change Status</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
