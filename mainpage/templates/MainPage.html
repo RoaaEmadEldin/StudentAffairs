@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/MainPage.css' %}">
+        <link rel="shortcut icon" type="x-icon" href="{% static 'MP Icon.png' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <button type="button" class="SA button" onclick="window.location.href='/Studentaffairs/'">
+            <span>Student Affairs</span>
+        </button>
+        <button type="button" class="LAB button" onclick="window.location.href='/Lab/'">
+            <span>Laboratory</span>
+        </button>
+        <button type="button" class="HS button" onclick="window.location.href='/Higherstudies/'">
+            <span>Higher Studies</span>
+        </button>
+        <button type="button" class="HR button" onclick="window.location.href='/Humanresources/'">
+            <span>Human Resources</span>
+        </button>
+    </body>
+</html>
