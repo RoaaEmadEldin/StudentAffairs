@@ -31,3 +31,10 @@ This website is designed to provide a student management for student affairs sta
   ### Change Status Page
   * Users can **`Change the Status of a Student`** from **Active to Inactive or vice versa** directly from the table rendered in the page of all active and inactive students.
 
+
+## Project Authors
+* [Mariam Ayman](https://github.com/mariamayman10)
+* [Roaa EmadEldin](https://github.com/RoaaEmadEldin)
+* [Rana Imara](https://github.com/RanaImara22)
+* [Habiba Ihab](https://github.com/habibaihab)
+* [Aya Osama](https://github.com/oaya2411)
